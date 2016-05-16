@@ -1,0 +1,1648 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 08:57:08 -0400
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.6) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.6) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (73.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 08:58:02 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.4ms)
+  [1m[36m (23.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (9.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20141023082904)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (22.3ms)[0m  [1mCREATE TABLE "items" ("id" serial primary key, "image" character varying(255), "message" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_items_on_user_id" ON "items"  ("user_id")
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141023082904"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreatePins (20141023083116)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (9.1ms)[0m  CREATE TABLE "pins" ("id" serial primary key, "user_id" integer, "item_id" integer, "influencer_id" integer, "message" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_pins_on_user_id" ON "pins"  ("user_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_pins_on_item_id" ON "pins"  ("item_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_pins_on_influencer_id" ON "pins"  ("influencer_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141023083116"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFollows (20141023083637)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "follows" ("id" serial primary key, "user_id" integer, "target_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_follows_on_user_id" ON "follows"  ("user_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_follows_on_target_id" ON "follows"  ("target_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141023083637"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20141023091156)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141023091156"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToUsers (20141026091357)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mALTER TABLE "users" ADD COLUMN "name" character varying(255)[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ALTER COLUMN "name" TYPE character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ALTER "name" SET NOT NULL
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141026091357"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddDemoUsers (20141027094212)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: ActiveRecord::Fixtures is deprecated! Use ActiveRecord::FixtureSet instead. (called from change at /Users/Deven/Documents/Wyncode/SocialStreamRails/db/migrate/20141027094212_add_demo_users.rb:4)
+  [1m[35m (1.0ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "items" DISABLE TRIGGER ALL;ALTER TABLE "pins" DISABLE TRIGGER ALL;ALTER TABLE "follows" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "items"
+  [1m[36mFixture Insert (1.7ms)[0m  [1mINSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/011.jpg', 'beautiful flowers in the window', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/261379381_d8fde25053fa.jpg', '', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 298486374)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/293704645_b4c6dab8ed99.jpg', '', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 113629430)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/144568575661705981_4ade117f9005.jpeg', '', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 281110143)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/164471358120532732_a3ae9498ad97.jpg', '', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 1018350795)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/184290639033145973_71e492dacec6.jpeg', '', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 51848956)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/272236897059737539_c4806e0b14c4.jpg', 'But I must explain to you how all this mistaken idea', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 374648174)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/275088534757448505_4f85768f71ec.jpg', 'Lorem ipsum dolor sit amet', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 638205575)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/281485446934954481_c04cfc76c018.png', 'It is a long established fact that a reader will be distracted', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 991788158)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/389230669370236857_335b7c698687.jpg', 'Lorem Ipsum is simply dummy text', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 507103779)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/1addc6292e97f5f796cf368df5d4b322.jpg', 'squirel power!', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 457008489)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "items" ("image", "message", "created_at", "updated_at", "id") VALUES ('items/6fb3f77d22ddc23305fcd1a2fd8c4e80_1.jpg', 'designed amazingness', '2016-05-16 13:00:03', '2016-05-16 13:00:03', 587967610)
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "items" ENABLE TRIGGER ALL;ALTER TABLE "pins" ENABLE TRIGGER ALL;ALTER TABLE "follows" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2016-05-16 13:00:03.454986"], ["email", "user@example.com"], ["encrypted_password", "$2a$10$84UgMOUiCBOa7PtHpKgwnes5FngErWtzCMhnHkrtTJdVh/g6YMRZy"], ["name", "admin"], ["updated_at", "2016-05-16 13:00:03.454986"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141027094212"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:00:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LandingController#index as HTML
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'user@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 1  [["current_sign_in_at", "2016-05-16 13:00:11.302934"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2016-05-16 13:00:11.302934"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-05-16 13:00:11.304559"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mItem Load (1.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mPin Load (0.8ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (33.9ms)
+  Rendered items/_item.html.erb (55.8ms)
+  [1m[35mPin Load (0.5ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mPin Load (0.9ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (3.1ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[35mPin Load (0.6ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (12.6ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.7ms)
+  Rendered items/_item.html.erb (13.5ms)
+  [1m[35mPin Load (0.6ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (3.4ms)
+  Rendered items/_item.html.erb (12.0ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (12.3ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.7ms)
+  Rendered items/_item.html.erb (15.7ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.7ms)
+  Rendered items/_item.html.erb (13.5ms)
+  [1m[35mPin Load (0.6ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (10.8ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (11.9ms)
+  [1m[35mPin Load (0.5ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (10.9ms)
+  Rendered landing/index.html.erb within layouts/application (228.2ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 6522ms (Views: 6445.1ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:00:18 -0400
+
+
+Started GET "/flat" for 127.0.0.1 at 2016-05-16 09:04:32 -0400
+Processing by FeedsController#flat as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:12:in `flat'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.3ms)
+
+
+Started GET "/flat" for 127.0.0.1 at 2016-05-16 09:04:32 -0400
+Processing by FeedsController#flat as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:12:in `flat'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.7ms)
+
+
+Started GET "/aggregated" for 127.0.0.1 at 2016-05-16 09:10:44 -0400
+Processing by FeedsController#aggregated as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:18:in `aggregated'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (58.9ms)
+
+
+Started GET "/aggregated" for 127.0.0.1 at 2016-05-16 09:10:44 -0400
+Processing by FeedsController#aggregated as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:18:in `aggregated'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-05-16 09:10:48 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFollow Load (1.3ms)[0m  [1mSELECT  "follows".* FROM "follows"  WHERE "follows"."user_id" = $1 AND "follows"."user_id" = 1  ORDER BY "follows"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  Rendered users/_profile.html.erb (18.4ms)
+  Rendered users/index.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 191ms (Views: 184.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2016-05-16 09:11:36 -0400
+Processing by FeedsController#user as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:6:in `user'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.6ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2016-05-16 09:11:36 -0400
+Processing by FeedsController#user as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:6:in `user'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:12:11 -0400
+Processing by LandingController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (10.4ms)
+  [1m[36mPin Load (0.7ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (8.7ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (8.2ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (8.6ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (9.6ms)
+  [1m[35mPin Load (0.6ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (8.6ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (8.4ms)
+  [1m[35mPin Load (0.7ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (3.1ms)
+  Rendered items/_item.html.erb (9.4ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (8.1ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (13.4ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (11.8ms)
+  Rendered landing/index.html.erb within layouts/application (150.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 335ms (Views: 326.7ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/pins" for 127.0.0.1 at 2016-05-16 09:12:15 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbMNsgj8JAUyAwi6v0molXMv5NZ6QqQwU0KfsvaLQ4s=", "message"=>"", "board_name"=>"My favourite things", "pin"=>{"influencer_id"=>"", "item_id"=>"638205575"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items"  WHERE "items"."id" = $1 LIMIT 1  [["id", 638205575]]
+  [1m[36mPin Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "pins"  WHERE ("pins"."item_id" = 638205575 AND "pins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mPin Exists (0.5ms)[0m  SELECT  1 AS one FROM "pins"  WHERE ("pins"."user_id" = 1 AND "pins"."item_id" = 638205575) LIMIT 1
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "pins" ("created_at", "item_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-05-16 13:12:15.220991"], ["item_id", 638205575], ["updated_at", "2016-05-16 13:12:15.220991"], ["user_id", 1]]
+  [1m[35m (178.1ms)[0m  COMMIT
+Something went wrong creating an activity: empty api_key parameter and missing or invalid STREAM_URL env variable
+empty api_key parameter and missing or invalid STREAM_URL env variable
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 185.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:12:15 -0400
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (3.4ms)
+  Rendered items/_item.html.erb (10.1ms)
+  [1m[35mPin Load (0.6ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (3.1ms)
+  Rendered items/_item.html.erb (9.1ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (9.1ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.4ms)
+  Rendered items/_item.html.erb (8.6ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (9.0ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (10.7ms)
+  [1m[35mPin Load (0.8ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (5.8ms)
+  Rendered items/_item.html.erb (12.9ms)
+  [1m[35mPin Load (0.7ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (9.4ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (8.9ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (10.1ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (9.8ms)
+  Rendered landing/index.html.erb within layouts/application (142.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 310ms (Views: 301.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:16 -0400
+
+
+Started POST "/pins" for 127.0.0.1 at 2016-05-16 09:12:21 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbMNsgj8JAUyAwi6v0molXMv5NZ6QqQwU0KfsvaLQ4s=", "message"=>"", "board_name"=>"My favourite things", "pin"=>{"influencer_id"=>"", "item_id"=>"980190962"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items"  WHERE "items"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36mPin Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "pins"  WHERE ("pins"."item_id" = 980190962 AND "pins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mPin Exists (0.5ms)[0m  SELECT  1 AS one FROM "pins"  WHERE ("pins"."user_id" = 1 AND "pins"."item_id" = 980190962) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pins" ("created_at", "item_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-05-16 13:12:21.783142"], ["item_id", 980190962], ["updated_at", "2016-05-16 13:12:21.783142"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Something went wrong creating an activity: empty api_key parameter and missing or invalid STREAM_URL env variable
+empty api_key parameter and missing or invalid STREAM_URL env variable
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:12:21 -0400
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (3.6ms)
+  Rendered items/_item.html.erb (13.8ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (9.4ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (8.7ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (9.4ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (9.7ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.7ms)
+  Rendered items/_item.html.erb (9.2ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (8.7ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (9.3ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.5ms)
+  Rendered items/_item.html.erb (9.3ms)
+  Rendered landing/index.html.erb within layouts/application (142.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 313ms (Views: 305.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:22 -0400
+
+
+Started POST "/pins" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+Processing by PinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbMNsgj8JAUyAwi6v0molXMv5NZ6QqQwU0KfsvaLQ4s=", "message"=>"", "board_name"=>"My favourite things", "pin"=>{"influencer_id"=>"", "item_id"=>"113629430"}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items"  WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 113629430]]
+  [1m[35mPin Exists (0.6ms)[0m  SELECT  1 AS one FROM "pins"  WHERE ("pins"."item_id" = 113629430 AND "pins"."user_id" = 1) LIMIT 1
+  [1m[36mPin Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "pins"  WHERE ("pins"."user_id" = 1 AND "pins"."item_id" = 113629430) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "pins" ("created_at", "item_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-05-16 13:12:25.334129"], ["item_id", 113629430], ["updated_at", "2016-05-16 13:12:25.334129"], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Something went wrong creating an activity: empty api_key parameter and missing or invalid STREAM_URL env variable
+empty api_key parameter and missing or invalid STREAM_URL env variable
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+Processing by LandingController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (4.0ms)
+  Rendered items/_item.html.erb (11.3ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (11.6ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (4.1ms)
+  Rendered items/_item.html.erb (11.2ms)
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (9.6ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (9.8ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.5ms)
+  Rendered items/_item.html.erb (9.5ms)
+  [1m[35mPin Load (0.5ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (9.8ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (10.1ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.3ms)
+  Rendered items/_item.html.erb (9.3ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.5ms)
+  Rendered items/_item.html.erb (8.9ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (8.5ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (9.1ms)
+  Rendered landing/index.html.erb within layouts/application (146.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 317ms (Views: 308.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:25 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:12:26 -0400
+
+
+Started GET "/flat" for 127.0.0.1 at 2016-05-16 09:12:27 -0400
+Processing by FeedsController#flat as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:12:in `flat'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.7ms)
+
+
+Started GET "/flat" for 127.0.0.1 at 2016-05-16 09:12:27 -0400
+Processing by FeedsController#flat as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:12:in `flat'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.5ms)
+
+
+Started GET "/aggregated" for 127.0.0.1 at 2016-05-16 09:12:30 -0400
+Processing by FeedsController#aggregated as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:18:in `aggregated'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.3ms)
+
+
+Started GET "/aggregated" for 127.0.0.1 at 2016-05-16 09:12:30 -0400
+Processing by FeedsController#aggregated as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (empty api_key parameter and missing or invalid STREAM_URL env variable):
+  app/controllers/feeds_controller.rb:18:in `aggregated'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:16:20 -0400
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (3.3ms)
+  Rendered items/_item.html.erb (9.2ms)
+  [1m[36mPin Load (0.7ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (7.4ms)
+  [1m[35mPin Load (0.7ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (4.0ms)
+  Rendered items/_item.html.erb (14.2ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.3ms)
+  Rendered items/_item.html.erb (11.1ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.4ms)
+  Rendered items/_item.html.erb (10.7ms)
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (3.0ms)
+  Rendered items/_item.html.erb (11.5ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (8.7ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (3.6ms)
+  Rendered items/_item.html.erb (12.6ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (11.1ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (10.5ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (8.3ms)
+  Rendered landing/index.html.erb within layouts/application (152.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 325ms (Views: 316.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:16:21 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:18:06 -0400
+Processing by LandingController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (4.8ms)
+  Rendered items/_item.html.erb (15.5ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (3.0ms)
+  Rendered items/_item.html.erb (12.3ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (10.3ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (10.8ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.3ms)
+  Rendered items/_item.html.erb (13.1ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.4ms)
+  Rendered items/_item.html.erb (9.7ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (11.9ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (10.1ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (10.4ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (10.4ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (9.5ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (9.5ms)
+  Rendered landing/index.html.erb within layouts/application (161.5ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 373ms (Views: 361.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:07 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (2.7ms)
+  Rendered items/_item.html.erb (9.1ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (8.1ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (3.5ms)
+  Rendered items/_item.html.erb (9.7ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (8.7ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (9.3ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.8ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (8.6ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (8.6ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.3ms)
+  Rendered items/_item.html.erb (8.7ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.4ms)
+  Rendered items/_item.html.erb (8.8ms)
+  Rendered landing/index.html.erb within layouts/application (132.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 300ms (Views: 291.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:18:12 -0400
+
+
+Started GET "/codefll.org" for 127.0.0.1 at 2016-05-16 09:18:16 -0400
+
+ActionController::RoutingError (No route matches [GET] "/codefll.org"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/Cellar/ruby/2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:18:27 -0400
+Processing by LandingController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mPin Load (0.5ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (3.0ms)
+  Rendered items/_item.html.erb (12.8ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (8.9ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (9.4ms)
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (9.5ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.4ms)
+  Rendered items/_item.html.erb (10.0ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (11.2ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (11.5ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (11.2ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[36mPin Load (0.6ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (9.3ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (9.3ms)
+  Rendered landing/index.html.erb within layouts/application (155.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 308ms (Views: 299.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:18:29 -0400
+Processing by LandingController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (3.3ms)
+  Rendered items/_item.html.erb (14.5ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (3.2ms)
+  Rendered items/_item.html.erb (13.3ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (12.1ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (1.9ms)
+  Rendered items/_item.html.erb (10.1ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (2.2ms)
+  Rendered items/_item.html.erb (9.9ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.4ms)
+  Rendered items/_item.html.erb (11.4ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (1.8ms)
+  Rendered items/_item.html.erb (8.8ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (2.6ms)
+  Rendered items/_item.html.erb (10.2ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (11.3ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (9.5ms)
+  [1m[35mPin Load (0.3ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (8.9ms)
+  [1m[36mPin Load (0.5ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (10.3ms)
+  Rendered landing/index.html.erb within layouts/application (164.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 326ms (Views: 318.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-16 09:35:32 -0400
+Processing by LandingController#index as HTML
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mPin Load (0.7ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 980190962]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 980190962]]
+  Rendered pins/_pin_form.html.erb (9.6ms)
+  Rendered items/_item.html.erb (29.2ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 298486374]]
+  Rendered pins/_pin_form.html.erb (3.8ms)
+  Rendered items/_item.html.erb (14.0ms)
+  [1m[36mPin Load (0.7ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 113629430]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 113629430]]
+  Rendered pins/_pin_form.html.erb (7.9ms)
+  Rendered items/_item.html.erb (15.4ms)
+  [1m[36mPin Load (0.3ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 281110143]]
+  Rendered pins/_pin_form.html.erb (2.9ms)
+  Rendered items/_item.html.erb (12.0ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 1018350795]]
+  Rendered pins/_pin_form.html.erb (3.2ms)
+  Rendered items/_item.html.erb (15.9ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 51848956]]
+  Rendered pins/_pin_form.html.erb (2.3ms)
+  Rendered items/_item.html.erb (12.3ms)
+  [1m[35mPin Load (0.6ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 374648174]]
+  Rendered pins/_pin_form.html.erb (3.1ms)
+  Rendered items/_item.html.erb (11.6ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 638205575]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 638205575]]
+  Rendered pins/_pin_form.html.erb (3.6ms)
+  Rendered items/_item.html.erb (12.3ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 991788158]]
+  Rendered pins/_pin_form.html.erb (2.0ms)
+  Rendered items/_item.html.erb (10.1ms)
+  [1m[35mPin Load (0.5ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 507103779]]
+  Rendered pins/_pin_form.html.erb (2.5ms)
+  Rendered items/_item.html.erb (13.4ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1[0m  [["item_id", 457008489]]
+  Rendered pins/_pin_form.html.erb (3.0ms)
+  Rendered items/_item.html.erb (12.2ms)
+  [1m[35mPin Load (0.4ms)[0m  SELECT  "pins".* FROM "pins"  WHERE "pins"."item_id" = $1 AND "pins"."user_id" = 1  ORDER BY "pins"."id" ASC LIMIT 1  [["item_id", 587967610]]
+  Rendered pins/_pin_form.html.erb (2.1ms)
+  Rendered items/_item.html.erb (10.5ms)
+  Rendered landing/index.html.erb within layouts/application (199.6ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 450ms (Views: 421.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/feeds.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/follows.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/items.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/pins.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:33 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/follows.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/items.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/landing.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/pins.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-16 09:35:34 -0400

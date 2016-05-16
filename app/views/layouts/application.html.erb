@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Streamterest" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Streamterest" %>">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="msapplication-TileColor" content="#222222">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <%= render 'layouts/navigation' %>
+    <section>
+        <article>
+          <div class="jumbotron">
+              <div class="container">
+                  <h1>Stream feed in action</h1>
+                  <p>
+                      Shabby chic reprehenderit exercitation minim. Heirloom four dollar toast sapiente magna keytar, velit hella venmo flexitarian organic. Microdosing banh mi ullamco, actually excepteur fap kale chips kombucha mixtape enim trust fund locavore neutra migas literally. Velit deserunt selvage fingerstache sint, ullamco locavore typewriter portland mlkshk sunt yr bitters squid reprehenderit. Cred quis photo booth occaecat viral etsy. Narwhal you probably haven't heard of them blue bottle fap salvia. Crucifix anim est try-hard, tumblr knausgaard gastropub ullamco venmo.
+                  </p>
+                  <p>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">
+                          <i class="icon-help-circle"></i> Click me
+                      </a>
+                  </p>
+              </div>
+          </div>
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+        </article>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
